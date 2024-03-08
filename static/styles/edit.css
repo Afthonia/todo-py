@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+}
+
+input {
+    border: 0;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #2d2e2d;
+}

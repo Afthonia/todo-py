@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    margin: 5%;
+    background-color: black;
+    width: 70%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    display: inline-block;
+    color: green;
+}
+
+.title-icon {
+    width: 30px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.no-task {
+    content: text("no task");
+    width: 200px;
+    align-content: center;
+}
+
+.tasks {
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.task-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 8px;
+    border-radius: 10px;
+    background-color: greenyellow;
+}
+
+.mng-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+form {
+    display: inline-block;
+}
+
+svg {
+    width: 20px;
+    margin-right: 5px;
+    color: green;
+}
+
+a {
+    color: green;
+}
+
+#task-done {
+    opacity: 0.5;
+}
+
+.task-mng {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 1;
+}
+
+input {
+    border: 0;
+    border-radius: 10px 0 0 10px;
+    padding: 20px;
+    background-color: #2d2e2d;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    background-color: green;
+    padding: 20px;
+}
+
+.btn:hover {
+    background-color: #278127;
+}
+
+#add-icon {
+    color: black;
+}
