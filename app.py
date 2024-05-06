@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_sqlalchemy import SQLAlchemy
-#from json_responses import json_req
+
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.secret_key = "hello"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo-list.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-#app.register_blueprint(json_req)
+
 
 from models.todo_model import db, Todo
 
@@ -45,7 +45,7 @@ def check(id):
     
     return redirect(url_for("index"))
 
-@app.route("/delete/<int:id>", methods=["DELETE"])
+@app.route("/delete/<int:id>", methods=["GET"])
 def delete(id):
     found_todo = Todo.query.filter_by(id=id).first()
     db.session.delete(found_todo)
@@ -102,7 +102,7 @@ def editTask(id):
         })
 
 
-@app.route("/todo/check/<int:id>")
+@app.route("/todo/check/<int:id>", methods=["POST"])
 def checkTask(id):
     found_todo = Todo.query.filter_by(id=id).first()
     found_todo.done = not found_todo.done
